@@ -37,6 +37,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.8)
   - IQKeyboardManagerSwift (4.0.5)
   - Kingfisher (1.9.3)
+  - SwiftValidator (3.0.1)
   - SwiftyJSON (2.4.0)
   - Swinject (1.1.5)
 
@@ -47,8 +48,19 @@ DEPENDENCIES:
   - Firebase/Database
   - IQKeyboardManagerSwift (= 4.0.5)
   - Kingfisher (~> 1.2)
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, tag `4.0.0`)
   - SwiftyJSON (< 3.0.0)
   - Swinject (~> 1.1.4)
+
+EXTERNAL SOURCES:
+  SwiftValidator:
+    :git: https://github.com/jpotts18/SwiftValidator.git
+    :tag: 4.0.0
+
+CHECKOUT OPTIONS:
+  SwiftValidator:
+    :git: https://github.com/jpotts18/SwiftValidator.git
+    :tag: 4.0.0
 
 SPEC CHECKSUMS:
   Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
@@ -62,9 +74,10 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   IQKeyboardManagerSwift: 41fd3a45a2cdb2a0e031af697708a95b865068a1
   Kingfisher: 9e37d2a78a082dc123bfe8a16de65de85518daae
+  SwiftValidator: 461a2c00173f001287a8fa1f12704b87ec8a6bc4
   SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
   Swinject: 49b2b23850829e0a6074681264dcb1aa64c0dbca
 
-PODFILE CHECKSUM: 3fa9c40f09245619cb1b1d15b0ad1171a956e5ff
+PODFILE CHECKSUM: 53e0eed92c8f68251dc0b98d592292a8e82a14a5
 
 COCOAPODS: 1.2.0.beta.1

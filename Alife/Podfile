@@ -20,4 +20,6 @@ target 'Alife' do
 	pod 'Kingfisher', '~> 1.2'
 
 	pod 'IQKeyboardManagerSwift', '4.0.5'
+
+	pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.0.0'
 end
