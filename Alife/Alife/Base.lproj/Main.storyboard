@@ -299,10 +299,10 @@
             </objects>
             <point key="canvasLocation" x="2239.5" y="1251.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Root View Controller-->
         <scene sceneID="f1h-Ow-Kwi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qFx-cp-gQY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qFx-cp-gQY" customClass="RootViewController" customModule="Alife" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WZB-cW-FRq">

@@ -33,7 +33,7 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //        self.signOut()
         
         if let user = FIRAuth.auth()?.currentUser {
-            self.navigationController?.navigationItem.leftBarButtonItems = []
+//            self.navigationController?.navigationItem.leftBarButtonItems = []
             
             self.performSegueWithIdentifier("emergencySegue", sender: self)
             
@@ -56,7 +56,11 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
+        if (segue.identifier == "emergencySegue") {
+            let destinationVC: UITabBarController = segue.destinationViewController as! TabBar
+            destinationVC.navigationItem.hidesBackButton = true
+            
+        }
         
     }
 
