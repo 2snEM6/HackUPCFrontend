@@ -274,10 +274,10 @@
             </objects>
             <point key="canvasLocation" x="1622" y="443"/>
         </scene>
-        <!--View Controller-->
+        <!--Emergency View Controller-->
         <scene sceneID="fcd-e1-bvU">
             <objects>
-                <viewController id="st8-BE-rmp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmergencyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="st8-BE-rmp" customClass="EmergencyViewController" customModule="Alife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hBo-hr-TXf"/>
                         <viewControllerLayoutGuide type="bottom" id="ZoA-fC-23E"/>

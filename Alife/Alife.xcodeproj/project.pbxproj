@@ -25,6 +25,7 @@
 		9C24AD541E6A309C00AB0503 /* TableView+LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24AD531E6A309C00AB0503 /* TableView+LoginVC.swift */; };
 		9C24AD561E6A317400AB0503 /* Setup+LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24AD551E6A317400AB0503 /* Setup+LoginVC.swift */; };
 		9C4D36F41E6AF2C500C0828F /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D36F31E6AF2C500C0828F /* EmergencyViewController.swift */; };
+		9C4D36F71E6AF39A00C0828F /* Setup+EmergencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D36F61E6AF39A00C0828F /* Setup+EmergencyVC.swift */; };
 		9CE468D51E6A427F00DFD475 /* IconTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468D41E6A427F00DFD475 /* IconTextFieldCell.swift */; };
 		9CE468D71E6A4B2E00DFD475 /* AppTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468D61E6A4B2E00DFD475 /* AppTitleCell.swift */; };
 		9CE468D91E6A543200DFD475 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468D81E6A543200DFD475 /* ButtonCell.swift */; };
@@ -59,6 +60,7 @@
 		9C24AD531E6A309C00AB0503 /* TableView+LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+LoginVC.swift"; sourceTree = "<group>"; };
 		9C24AD551E6A317400AB0503 /* Setup+LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Setup+LoginVC.swift"; sourceTree = "<group>"; };
 		9C4D36F31E6AF2C500C0828F /* EmergencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
+		9C4D36F61E6AF39A00C0828F /* Setup+EmergencyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Setup+EmergencyVC.swift"; sourceTree = "<group>"; };
 		9CE468D41E6A427F00DFD475 /* IconTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconTextFieldCell.swift; sourceTree = "<group>"; };
 		9CE468D61E6A4B2E00DFD475 /* AppTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTitleCell.swift; sourceTree = "<group>"; };
 		9CE468D81E6A543200DFD475 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
@@ -210,9 +212,18 @@
 		9C4D36F21E6AF2C500C0828F /* Emergency */ = {
 			isa = PBXGroup;
 			children = (
+				9C4D36F51E6AF35700C0828F /* Extensions */,
 				9C4D36F31E6AF2C500C0828F /* EmergencyViewController.swift */,
 			);
 			path = Emergency;
+			sourceTree = "<group>";
+		};
+		9C4D36F51E6AF35700C0828F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D36F61E6AF39A00C0828F /* Setup+EmergencyVC.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9CE468D31E6A421600DFD475 /* CustomCells */ = {
@@ -399,6 +410,7 @@
 				9C24AD291E6A2DA600AB0503 /* AppDelegate.swift in Sources */,
 				9CE468DD1E6A5F0500DFD475 /* LabelCell.swift in Sources */,
 				9C24AD4C1E6A2FAD00AB0503 /* User.swift in Sources */,
+				9C4D36F71E6AF39A00C0828F /* Setup+EmergencyVC.swift in Sources */,
 				9CE468E41E6ABFB000DFD475 /* AuthAPIStore.swift in Sources */,
 				03DD17201E6AD4E000CBD252 /* EmergencyViewController.swift in Sources */,
 			);
