@@ -10,8 +10,13 @@ import UIKit
 
 class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var loginTableView: UITableView!
+    
+    var isLoginCase:Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         self.setupUI()
     }
@@ -22,6 +27,7 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
         
     }
 
