@@ -24,6 +24,7 @@
 		9C24AD521E6A301800AB0503 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24AD511E6A301800AB0503 /* LoginViewController.swift */; };
 		9C24AD541E6A309C00AB0503 /* TableView+LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24AD531E6A309C00AB0503 /* TableView+LoginVC.swift */; };
 		9C24AD561E6A317400AB0503 /* Setup+LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24AD551E6A317400AB0503 /* Setup+LoginVC.swift */; };
+		9C4D36F41E6AF2C500C0828F /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D36F31E6AF2C500C0828F /* EmergencyViewController.swift */; };
 		9CE468D51E6A427F00DFD475 /* IconTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468D41E6A427F00DFD475 /* IconTextFieldCell.swift */; };
 		9CE468D71E6A4B2E00DFD475 /* AppTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468D61E6A4B2E00DFD475 /* AppTitleCell.swift */; };
 		9CE468D91E6A543200DFD475 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468D81E6A543200DFD475 /* ButtonCell.swift */; };
@@ -57,6 +58,7 @@
 		9C24AD511E6A301800AB0503 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9C24AD531E6A309C00AB0503 /* TableView+LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+LoginVC.swift"; sourceTree = "<group>"; };
 		9C24AD551E6A317400AB0503 /* Setup+LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Setup+LoginVC.swift"; sourceTree = "<group>"; };
+		9C4D36F31E6AF2C500C0828F /* EmergencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		9CE468D41E6A427F00DFD475 /* IconTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconTextFieldCell.swift; sourceTree = "<group>"; };
 		9CE468D61E6A4B2E00DFD475 /* AppTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTitleCell.swift; sourceTree = "<group>"; };
 		9CE468D81E6A543200DFD475 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
@@ -84,22 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03DD171D1E6AD46B00CBD252 /* Emergency */ = {
-			isa = PBXGroup;
-			children = (
-				03DD171E1E6AD48500CBD252 /* Extensions */,
-				03DD171F1E6AD4E000CBD252 /* EmergencyViewController.swift */,
-			);
-			path = Emergency;
-			sourceTree = "<group>";
-		};
-		03DD171E1E6AD48500CBD252 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		97978ACE9133C8E1517ECF60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +155,7 @@
 		9C24AD3F1E6A2F1200AB0503 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9C4D36F21E6AF2C500C0828F /* Emergency */,
 				9C24AD411E6A2F1200AB0503 /* Login */,
 				9CE468E71E6AD1BF00DFD475 /* TabBar */,
 				9C24AD401E6A2F1200AB0503 /* Chat */,
@@ -218,6 +205,14 @@
 				9CE468DE1E6A610D00DFD475 /* Buttons+LoginVC.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9C4D36F21E6AF2C500C0828F /* Emergency */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D36F31E6AF2C500C0828F /* EmergencyViewController.swift */,
+			);
+			path = Emergency;
 			sourceTree = "<group>";
 		};
 		9CE468D31E6A421600DFD475 /* CustomCells */ = {
@@ -396,6 +391,7 @@
 				9CE468EB1E6ADF3300DFD475 /* TabBarController+Extension.swift in Sources */,
 				9C24AD521E6A301800AB0503 /* LoginViewController.swift in Sources */,
 				9CE468D51E6A427F00DFD475 /* IconTextFieldCell.swift in Sources */,
+				9C4D36F41E6AF2C500C0828F /* EmergencyViewController.swift in Sources */,
 				9CE468D71E6A4B2E00DFD475 /* AppTitleCell.swift in Sources */,
 				03DD17241E6AE74D00CBD252 /* Location.swift in Sources */,
 				9C24AD4A1E6A2F8000AB0503 /* ChatViewController.swift in Sources */,
