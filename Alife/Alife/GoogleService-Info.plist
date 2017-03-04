@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>866200268369-l6rmtmdd9bt2v9opgl596ebld8o1gtr5.apps.googleusercontent.com</string>
+	<string>866200268369-e5ino8djcgghild8ucho3us12f2fgltl.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.866200268369-l6rmtmdd9bt2v9opgl596ebld8o1gtr5</string>
+	<string>com.googleusercontent.apps.866200268369-e5ino8djcgghild8ucho3us12f2fgltl</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBQUqrdIZwVSt9aC-WLSDY_Q17QeC6KNq0</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>HackUPC.Alife</string>
+	<string>com.hackupc.alife</string>
 	<key>PROJECT_ID</key>
 	<string>alife-93165</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:866200268369:ios:576e4a8566699864</string>
+	<string>1:866200268369:ios:abede00bf4b618d3</string>
 	<key>DATABASE_URL</key>
 	<string>https://alife-93165.firebaseio.com</string>
 </dict>
