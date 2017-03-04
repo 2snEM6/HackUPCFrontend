@@ -8,20 +8,29 @@
 
 import UIKit
 import SwiftLocation
+import Firebase
 
 class EmergencyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let emergencyAPIStore = EmergencyAPIStore()
     
+    var userID:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        userID = (FIRAuth.auth()?.currentUser?.uid)!
+        
 
         // Do any additional setup after loading the view.
-        print("TEST: POSTING emergency")
-        emergencyAPIStore.postEmergency("t2hLBi4OcIbededu7Q9vPQyxko33", type: 0, lat:
-            41.387015, long: 2.170047)
+        
+        getUserLocation { (lat, long) in
+            print("TEST: POSTING emergency")
+            self.emergencyAPIStore.postEmergency(self.userID, type: 0, lat:
+                lat, long: long)
+        }
+        
         
         print("TEST: GET ALL emergencies")
-        emergencyAPIStore.getUserEmergenciesID("t2hLBi4OcIbededu7Q9vPQyxko33") { (emergenciesID) in
+        emergencyAPIStore.getUserEmergenciesID(userID) { (emergenciesID) in
             for emergencyID in emergenciesID {
                 print("EmergencyID: \(emergencyID)")
             }
@@ -43,13 +52,20 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
-    func getUserLocation() {
+    func getUserLocation(callback: (lat: Double, long: Double) -> Void) {
         SwiftLocation.Location.getLocation(withAccuracy: .Block, frequency: .OneShot, timeout: 50, onSuccess: { (location) in
             //double
             print("EmergencyLocation:   lat = \(location.coordinate.latitude)   long = \(location.coordinate.longitude)")
+            callback(lat: location.coordinate.latitude, long: location.coordinate.longitude)
         }) { (lastValidLocation, error) in
             //double
-            print("FAIL: EmergencyLocation")
+            if let lastLoc = lastValidLocation {
+                callback(lat: lastLoc.coordinate.latitude, long: lastLoc.coordinate.longitude)
+            } else {
+                print("ERROR: \(error)")
+                print("FAIL: EmergencyLocation")
+            }
+            
         }
     }
     

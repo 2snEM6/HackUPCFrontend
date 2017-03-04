@@ -25,8 +25,8 @@ class EmergencyAPIStore {
         let encoding = Alamofire.ParameterEncoding.JSON
         
         let parameters: [String: AnyObject] = [
-            "lat": lat,
-            "long": long,
+            "location": ["latitude": lat,
+                "longitude": long],
             "type": type
         ]
         

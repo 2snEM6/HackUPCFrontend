@@ -23,8 +23,8 @@ class Location: LocationSerializable {
     }
     
     static func object(fromJSON json: JSON) -> AnyObject? {
-        guard let lat = json["lat"].double
-            , let long = json["long"].double
+        guard let lat = json["latitude"].double
+            , let long = json["longitude"].double
             else {
                 print("ERROR: Parsing location")
                 
