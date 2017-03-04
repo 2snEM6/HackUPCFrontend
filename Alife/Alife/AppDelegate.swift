@@ -8,7 +8,11 @@
 
 import UIKit
 import CoreData
+<<<<<<< HEAD
 import IQKeyboardManagerSwift
+=======
+import Firebase
+>>>>>>> 6405b7940b0db341ca3bcde76168e8c52abdf460
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,10 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+<<<<<<< HEAD
         
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().enableAutoToolbar = false
         
+=======
+        // Use Firebase library to configure APIs
+        FIRApp.configure()
+>>>>>>> 6405b7940b0db341ca3bcde76168e8c52abdf460
         return true
     }
 

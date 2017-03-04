@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		036578879A972EEA6CBBA353 /* Pods_Alife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AC0FD1E34C965D628BFA79 /* Pods_Alife.framework */; };
+		03D8225E1E6A44A800F1DC07 /* APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D8225D1E6A44A800F1DC07 /* APICalls.swift */; };
 		9C24AD291E6A2DA600AB0503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24AD281E6A2DA600AB0503 /* AppDelegate.swift */; };
 		9C24AD2B1E6A2DA600AB0503 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24AD2A1E6A2DA600AB0503 /* ViewController.swift */; };
 		9C24AD2E1E6A2DA600AB0503 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C24AD2C1E6A2DA600AB0503 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03D8225D1E6A44A800F1DC07 /* APICalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICalls.swift; sourceTree = "<group>"; };
 		42A00F9DC740FF447A229DC3 /* Pods-Alife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alife.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alife/Pods-Alife.release.xcconfig"; sourceTree = "<group>"; };
 		9C24AD251E6A2DA600AB0503 /* Alife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C24AD281E6A2DA600AB0503 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				9C24AD281E6A2DA600AB0503 /* AppDelegate.swift */,
 				9C24AD2A1E6A2DA600AB0503 /* ViewController.swift */,
+				03D8225D1E6A44A800F1DC07 /* APICalls.swift */,
 				9C24AD3D1E6A2F1200AB0503 /* Extensions */,
 				9CE468D31E6A421600DFD475 /* CustomCells */,
 				9C24AD3E1E6A2F1200AB0503 /* Models */,
@@ -340,6 +343,7 @@
 				9C24AD291E6A2DA600AB0503 /* AppDelegate.swift in Sources */,
 				9CE468DD1E6A5F0500DFD475 /* LabelCell.swift in Sources */,
 				9C24AD4C1E6A2FAD00AB0503 /* User.swift in Sources */,
+				03D8225E1E6A44A800F1DC07 /* APICalls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
