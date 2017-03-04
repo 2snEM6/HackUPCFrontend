@@ -14,13 +14,8 @@ class TabBar: UITabBarController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.navigationItem.hidesBackButton = true
-        self.navigationController?.navigationItem.leftBarButtonItem = nil
         
-        self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
-        
-        
-            }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -187,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="945.5" y="443.5"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--Chat List View Controller-->
         <scene sceneID="1Z7-VY-gfP">
             <objects>
-                <viewController storyboardIdentifier="ChatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CUz-Wg-tiZ" customClass="ChatViewController" customModule="Alife" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CUz-Wg-tiZ" customClass="ChatListViewController" customModule="Alife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="htI-Fz-CFA"/>
                         <viewControllerLayoutGuide type="bottom" id="P5t-xm-Var"/>
@@ -198,7 +198,79 @@
                     <view key="view" contentMode="scaleToFill" id="hIt-w9-ybV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4kt-Wq-zvi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatListCell" rowHeight="85" id="Z6U-9C-ofY" customClass="ChatListCell" customModule="Alife" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z6U-9C-ofY" id="Eab-y7-CYH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBi-cH-LOc">
+                                                    <rect key="frame" x="23" y="23" width="40" height="40"/>
+                                                    <color key="backgroundColor" red="0.80784313730000001" green="0.23921568630000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="hh6-yP-9Uh"/>
+                                                        <constraint firstAttribute="height" constant="40" id="k4u-xs-yND"/>
+                                                    </constraints>
+                                                </view>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Emergency in _________" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIB-uZ-iF1">
+                                                    <rect key="frame" x="68" y="12" width="299" height="36.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="22 minutes ago" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVo-oz-3Tw">
+                                                    <rect key="frame" x="68" y="34" width="299" height="30.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="AbD-jw-8fP"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.73959967156312245" green="0.74472495408776429" blue="0.77096112400530503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rIB-uZ-iF1" firstAttribute="top" secondItem="Eab-y7-CYH" secondAttribute="topMargin" constant="4" id="8Q6-44-sQL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dVo-oz-3Tw" secondAttribute="trailing" id="8af-Po-Wdq"/>
+                                                <constraint firstItem="rIB-uZ-iF1" firstAttribute="leading" secondItem="RBi-cH-LOc" secondAttribute="trailing" constant="5" id="Fv4-Za-U12"/>
+                                                <constraint firstItem="RBi-cH-LOc" firstAttribute="centerY" secondItem="Eab-y7-CYH" secondAttribute="centerY" id="IaD-hU-qff"/>
+                                                <constraint firstItem="dVo-oz-3Tw" firstAttribute="leading" secondItem="rIB-uZ-iF1" secondAttribute="leading" id="O0Q-nz-myZ"/>
+                                                <constraint firstItem="RBi-cH-LOc" firstAttribute="centerX" secondItem="Eab-y7-CYH" secondAttribute="centerX" id="Vgy-fO-7bC"/>
+                                                <constraint firstItem="RBi-cH-LOc" firstAttribute="leading" secondItem="Eab-y7-CYH" secondAttribute="leadingMargin" constant="15" id="bWe-xg-zzC"/>
+                                                <constraint firstItem="dVo-oz-3Tw" firstAttribute="top" secondItem="rIB-uZ-iF1" secondAttribute="bottom" constant="-14.5" id="cHP-Uo-ggR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rIB-uZ-iF1" secondAttribute="trailing" id="m9B-Es-CIK"/>
+                                                <constraint firstItem="dVo-oz-3Tw" firstAttribute="leading" secondItem="RBi-cH-LOc" secondAttribute="trailing" constant="5" id="udU-Hc-Ziw"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Vgy-fO-7bC"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emergencyGravityTextView" destination="dVo-oz-3Tw" id="w8A-uw-ndz"/>
+                                            <outlet property="emergencyLocationTextView" destination="rIB-uZ-iF1" id="56f-NU-oxY"/>
+                                            <outlet property="gravityColor" destination="RBi-cH-LOc" id="UG7-2s-LOG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CUz-Wg-tiZ" id="Joe-d4-VPI"/>
+                                    <outlet property="delegate" destination="CUz-Wg-tiZ" id="dXz-cQ-l01"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P5t-xm-Var" firstAttribute="top" secondItem="4kt-Wq-zvi" secondAttribute="bottom" id="Mjn-6T-pCu"/>
+                            <constraint firstItem="4kt-Wq-zvi" firstAttribute="leading" secondItem="hIt-w9-ybV" secondAttribute="leadingMargin" constant="-20" id="N6v-ni-C1a"/>
+                            <constraint firstItem="4kt-Wq-zvi" firstAttribute="top" secondItem="htI-Fz-CFA" secondAttribute="bottom" id="kVg-F6-N2h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4kt-Wq-zvi" secondAttribute="trailing" constant="-20" id="mzQ-qo-dHw"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="chatsIcon" selectedImage="chatsIcon" id="ajI-tC-JfT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
