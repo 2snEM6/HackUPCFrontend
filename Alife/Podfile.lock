@@ -36,11 +36,13 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.8)
   - IQKeyboardManagerSwift (4.0.5)
+  - JSQMessagesViewController (7.3.4):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
   - Kingfisher (1.9.3)
   - SwiftLocation (1.0.5)
   - SwiftValidator (3.0.1)
   - SwiftyJSON (2.4.0)
-  - Swinject (1.1.5)
 
 DEPENDENCIES:
   - Alamofire (< 4.0.0)
@@ -48,11 +50,11 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - IQKeyboardManagerSwift (= 4.0.5)
+  - JSQMessagesViewController
   - Kingfisher (~> 1.2)
   - SwiftLocation (from `https://github.com/malcommac/SwiftLocation.git`, branch `feature/swift2.3`)
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, tag `4.0.0`)
   - SwiftyJSON (< 3.0.0)
-  - Swinject (~> 1.1.4)
 
 EXTERNAL SOURCES:
   SwiftLocation:
@@ -81,12 +83,13 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   IQKeyboardManagerSwift: 41fd3a45a2cdb2a0e031af697708a95b865068a1
+  JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   Kingfisher: 9e37d2a78a082dc123bfe8a16de65de85518daae
   SwiftLocation: 310142ddfcfc1df770b05ee762592f6ee9896cee
   SwiftValidator: 461a2c00173f001287a8fa1f12704b87ec8a6bc4
   SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
-  Swinject: 49b2b23850829e0a6074681264dcb1aa64c0dbca
 
-PODFILE CHECKSUM: d7dab9c610c7eccaa2fc9a0eac3589bbc0482ac7
+PODFILE CHECKSUM: f785e34e948829a99c2390662af0eb8176903cdb
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.0.beta.1
