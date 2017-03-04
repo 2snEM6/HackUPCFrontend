@@ -25,6 +25,7 @@ class TabBar: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        selectedIndex = 1
         
         print(self.tabBar.items?.count)
         
