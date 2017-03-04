@@ -21,9 +21,15 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var user:User? 
     
+    override func viewWillDisappear(animated: Bool) {
+//        self.navigationController?.navigationBar.setItems([], animated: true)
+        self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
+        
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        self.navigationItem.setHidesBackButton(true, animated: true)
 //        self.signOut()
         
         if let user = FIRAuth.auth()?.currentUser {

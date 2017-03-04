@@ -9,15 +9,13 @@
 import UIKit
 
 
-class ChatViewController: UIViewController {
+class ChatListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         self.navigationController?.navigationBar.topItem?.title = "Emergencies"
-        
-        self.tabBarController?.navigationItem.leftBarButtonItems = []
         
         
     }

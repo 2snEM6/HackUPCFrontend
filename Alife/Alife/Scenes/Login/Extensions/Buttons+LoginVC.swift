@@ -19,9 +19,11 @@ extension LoginViewController {
                 print(error)
             }
             else {
-                print(user?.uid)
+                self.performSegueWithIdentifier("emergencySegue", sender: self)
+                
+                print("Logged in")
             }
-            print("Perform segue")
+            
         }
     
     }
@@ -29,7 +31,10 @@ extension LoginViewController {
     func registerButtonPressed() {
         
         self.authAPIStore.register(self.fakeUsername, email: self.fakeEmail, password: self.fakePassword) { (user) in
-            print(user)
+            
+            self.performSegueWithIdentifier("emergencySegue", sender: self)
+            
+            print("Logged in")
         }
     }
 }
