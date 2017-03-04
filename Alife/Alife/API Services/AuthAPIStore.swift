@@ -61,8 +61,9 @@ class AuthAPIStore {
         
     }
     
-    func postEmergency(type: Int, lat: Float, long: Float) {
-        let URL = NSURL(string: "\(Constants.Server.URI_API)/emergencies")!
+    //  End point: /users/:id/emergencies
+    func postEmergency(userID: String, type: Int, lat: Float, long: Float) {
+        let URL = NSURL(string: "\(Constants.Server.URI_API)/users/\(userID)/emergencies")!
         let URLRequest = NSMutableURLRequest(URL: URL)
         
         URLRequest.HTTPMethod = "POST"
