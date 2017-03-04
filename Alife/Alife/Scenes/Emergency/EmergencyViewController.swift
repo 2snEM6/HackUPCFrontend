@@ -13,7 +13,6 @@ import Firebase
 class EmergencyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let emergencyAPIStore = EmergencyAPIStore()
     
-    
     var userID:String = ""
     
     override func viewDidLoad() {
@@ -22,12 +21,6 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
         
 
         // Do any additional setup after loading the view.
-        
-        getUserLocation { (lat, long) in
-            print("TEST: POSTING emergency")
-            self.emergencyAPIStore.postEmergency(self.userID, type: 0, lat:
-                lat, long: long)
-        }
     }
 
     override func didReceiveMemoryWarning() {
