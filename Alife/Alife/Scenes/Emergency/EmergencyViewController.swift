@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftLocation
 
 class EmergencyViewController: UIViewController {
 
@@ -19,6 +20,14 @@ class EmergencyViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getUserLocation() {
+        Location.getLocation(withAccuracy: .Block, frequency: .OneShot, timeout: 50, onSuccess: { (location) in
+            return (location.coordinate.latitude, location.coordinate.longitude) //double
+        }) { (lastValidLocation, error) in
+            return (lastValidLocation!.coordinate.latitude, lastValidLocation!.coordinate.longitude)
+        }
     }
     
 

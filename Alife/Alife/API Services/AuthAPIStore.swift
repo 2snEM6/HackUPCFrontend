@@ -6,7 +6,6 @@
 //  Copyright © 2017 HackUPC. All rights reserved.
 //
 
-import UIKit
 import Alamofire
 import Firebase
 
@@ -62,7 +61,7 @@ class AuthAPIStore {
     }
     
     //  End point: /users/:id/emergencies
-    func postEmergency(userID: String, type: Int, lat: Float, long: Float) {
+    func postEmergency(userID: String, type: Int, lat: Double, long: Double) {
         let URL = NSURL(string: "\(Constants.Server.URI_API)/users/\(userID)/emergencies")!
         let URLRequest = NSMutableURLRequest(URL: URL)
         

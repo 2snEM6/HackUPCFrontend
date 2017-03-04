@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		036578879A972EEA6CBBA353 /* Pods_Alife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AC0FD1E34C965D628BFA79 /* Pods_Alife.framework */; };
 		03DD17201E6AD4E000CBD252 /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD171F1E6AD4E000CBD252 /* EmergencyViewController.swift */; };
+		03DD17221E6AE0F300CBD252 /* ChatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD17211E6AE0F300CBD252 /* ChatAPI.swift */; };
+		03DD17241E6AE74D00CBD252 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD17231E6AE74D00CBD252 /* Location.swift */; };
 		9C24AD291E6A2DA600AB0503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24AD281E6A2DA600AB0503 /* AppDelegate.swift */; };
 		9C24AD2B1E6A2DA600AB0503 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24AD2A1E6A2DA600AB0503 /* ViewController.swift */; };
 		9C24AD2E1E6A2DA600AB0503 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C24AD2C1E6A2DA600AB0503 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		03DD171F1E6AD4E000CBD252 /* EmergencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
+		03DD17211E6AE0F300CBD252 /* ChatAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatAPI.swift; sourceTree = "<group>"; };
+		03DD17231E6AE74D00CBD252 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		42A00F9DC740FF447A229DC3 /* Pods-Alife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alife.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alife/Pods-Alife.release.xcconfig"; sourceTree = "<group>"; };
 		9C24AD251E6A2DA600AB0503 /* Alife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C24AD281E6A2DA600AB0503 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 			children = (
 				9C24AD4B1E6A2FAD00AB0503 /* User.swift */,
 				9C24AD4D1E6A2FB400AB0503 /* Emergency.swift */,
+				03DD17231E6AE74D00CBD252 /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				9CE468E31E6ABFB000DFD475 /* AuthAPIStore.swift */,
+				03DD17211E6AE0F300CBD252 /* ChatAPI.swift */,
 			);
 			path = "API Services";
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 			files = (
 				9C24AD541E6A309C00AB0503 /* TableView+LoginVC.swift in Sources */,
 				9CE468E61E6AC00D00DFD475 /* Constants.swift in Sources */,
+				03DD17221E6AE0F300CBD252 /* ChatAPI.swift in Sources */,
 				9CE468D91E6A543200DFD475 /* ButtonCell.swift in Sources */,
 				9CE468DB1E6A5BFB00DFD475 /* ViewController+Extension.swift in Sources */,
 				9C24AD4E1E6A2FB400AB0503 /* Emergency.swift in Sources */,
@@ -374,6 +381,7 @@
 				9C24AD521E6A301800AB0503 /* LoginViewController.swift in Sources */,
 				9CE468D51E6A427F00DFD475 /* IconTextFieldCell.swift in Sources */,
 				9CE468D71E6A4B2E00DFD475 /* AppTitleCell.swift in Sources */,
+				03DD17241E6AE74D00CBD252 /* Location.swift in Sources */,
 				9C24AD4A1E6A2F8000AB0503 /* ChatViewController.swift in Sources */,
 				9CE468DF1E6A610D00DFD475 /* Buttons+LoginVC.swift in Sources */,
 				9C24AD291E6A2DA600AB0503 /* AppDelegate.swift in Sources */,
