@@ -13,6 +13,7 @@ import Firebase
 class EmergencyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let emergencyAPIStore = EmergencyAPIStore()
     
+    
     var userID:String = ""
     
     override func viewDidLoad() {
@@ -27,22 +28,6 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
             self.emergencyAPIStore.postEmergency(self.userID, type: 0, lat:
                 lat, long: long)
         }
-        
-        
-        print("TEST: GET ALL emergencies")
-        emergencyAPIStore.getUserEmergenciesID(userID) { (emergenciesID) in
-            for emergencyID in emergenciesID {
-                print("EmergencyID: \(emergencyID)")
-            }
-            self.emergencyAPIStore.getEmergencies(emergenciesID, callback: { (emergency) in
-                print("Emergency: \(emergency.id)")
-                print(emergency)
-            })
-            
-        }
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

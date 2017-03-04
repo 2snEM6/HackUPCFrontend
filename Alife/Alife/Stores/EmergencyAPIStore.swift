@@ -34,37 +34,29 @@ class EmergencyAPIStore {
         Alamofire.request(encoded)
     }
     
-    func getUserEmergenciesID(userID: String, callback: ([String]) -> Void) {
+    func getUserEmergenciesID(userID: String, callback: String -> Void) {
         
-        FIRDatabase.database().reference().child("/userEmergencies/\(userID)").observeEventType(.Value, withBlock:  { (snapshot) in
-            if let emergencyListDictionary = snapshot.value as? Dictionary<String,AnyObject> {
-                var emergenciesID: [String] = []
-                for (key, _) in emergencyListDictionary {
-                    emergenciesID.append(key)
-                }
-                callback(emergenciesID)
+        FIRDatabase.database().reference().child("/userEmergencies/\(userID)").observeEventType(.ChildAdded, withBlock:  { (snapshot) in
+            if let emergencyID = snapshot.value as? String {
+                let emergencyJSON = JSON(emergencyID)
+                print("getUserEmergencies: \(emergencyJSON)")
+                callback(emergencyID)
             }
         })
         
     }
     
-    func getEmergencies(emergenciesID: [String], callback: Emergency -> Void)  {
-        //var emergencies: [Emergency] = []
-        print("TEST: emergenciesID")
-        print(emergenciesID)
+    func getEmergency(emergencyID: String, callback: Emergency -> Void)  {
         
-        for emergencyID in emergenciesID {
-            FIRDatabase.database().reference().child("/emergencies/\(emergencyID)").observeEventType(.Value, withBlock: { (snapshot) in
-                if let emergencyDictionary = snapshot.value as? Dictionary<String, AnyObject> {
-                    
-                    let emergencyJSON = JSON(emergencyDictionary)
-                    print("Success    bhgt with JSON: \(emergencyJSON)")
-                    if let emergency = Emergency.object(fromJSON: emergencyJSON) as? Emergency {
-                        callback(emergency)
-                    }
-                    //emergencies.append(emergency)
+        FIRDatabase.database().reference().child("/emergencies/\(emergencyID)").observeEventType(.Value, withBlock: { (snapshot) in
+            if let emergencyDictionary = snapshot.value as? Dictionary<String, AnyObject> {
+                
+                let emergencyJSON = JSON(emergencyDictionary)
+                print("Success    bhgt with JSON: \(emergencyJSON)")
+                if let emergency = Emergency.object(fromJSON: emergencyJSON) as? Emergency {
+                    callback(emergency)
                 }
-            })
-        }
+            }
+        })
     }
 }

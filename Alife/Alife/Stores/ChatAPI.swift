@@ -46,7 +46,7 @@ class ChatAPI {
         }
     }
     
-    func getMessage(emergencyID: String, callback: (Message) -> Void){
+    func getMessages(emergencyID: String, callback: (Message) -> Void){
         FIRDatabase.database().reference().child("/emergencyMessages/\(emergencyID)").observeEventType(.ChildAdded, withBlock:  { (snapshot) in
             if let messageDictionary = snapshot.value as? Dictionary<String, AnyObject> {
                 let messageJSON = JSON(messageDictionary)
