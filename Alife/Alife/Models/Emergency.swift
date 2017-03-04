@@ -19,9 +19,9 @@ class Emergency: EmergencySerializable {
     let id:String
     let type:Int
     let location: Location
-    let timestamp: Int
+    let timestamp: Int64
     
-    init(id: String, type: Int, location: Location, timestamp: Int) {
+    init(id: String, type: Int, location: Location, timestamp: Int64) {
         
         self.id = id
         self.type = type
@@ -34,7 +34,7 @@ class Emergency: EmergencySerializable {
         if let location = Location.object(fromJSON: json["data"]["location"]) as? Location {
             guard let id = json["key"].string
                 , let type = json["data"]["type"].int
-                , let type = json["data"]["_timestamp"].int
+                , let timestamp = json["data"]["_timestamp"].int64
                 else {
                     print("ERROR: Parsing emergency")
                     return nil

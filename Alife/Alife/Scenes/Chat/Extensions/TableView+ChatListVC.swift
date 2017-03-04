@@ -11,7 +11,7 @@ import UIKit
 extension ChatListViewController {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.emergencies.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -19,18 +19,13 @@ extension ChatListViewController {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("chatListCell") as? ChatListCell {
             
-            var type:Int = 0
-            
-            if indexPath.row % 3 == 0 {
-                type = 2
-            }
-            else if indexPath.row % 2 == 0 {
-                type = 1
-            }
+           
+            let emergencyID = self.emergenciesID[indexPath.row]
+            let emergency = self.emergencies[emergencyID]
             
             cell.emergencyLocationTextView.text = "Emergency in Barcelona"
             cell.gravityColor.layer.cornerRadius = cell.gravityColor.frame.height / 2
-            switch type {
+            switch emergency!.type {
             case 0:
                 cell.emergencyGravityTextView.text = "22 minutes ago"
                 cell.gravityColor.backgroundColor = UIColor(red:0.81, green:0.24, blue:0.24, alpha:1.0)

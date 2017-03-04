@@ -13,6 +13,8 @@ import Firebase
 class ChatListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let emergencyAPIStore = EmergencyAPIStore()
     
+    @IBOutlet var chatTableView: UITableView!
+    
     var userID:String = ""
     
     var emergenciesID: [String] = []
@@ -25,10 +27,12 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         
         
         print("TEST: GET ALL emergencies")
+        
         emergencyAPIStore.getUserEmergenciesID(userID) { (emergencyID) in
             self.emergenciesID.append(emergencyID)
             self.emergencyAPIStore.getEmergency(emergencyID, callback: { (emergency) in
                 self.emergencies[emergency.id] = emergency
+                self.chatTableView.reloadData()
             })
             
         }

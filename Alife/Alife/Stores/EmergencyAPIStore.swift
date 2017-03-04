@@ -35,12 +35,20 @@ class EmergencyAPIStore {
     }
     
     func getUserEmergenciesID(userID: String, callback: String -> Void) {
-        
+        print(FIRDatabase.database().reference().child("/userEmergencies/\(userID)"))
         FIRDatabase.database().reference().child("/userEmergencies/\(userID)").observeEventType(.ChildAdded, withBlock:  { (snapshot) in
+            print(snapshot.value)
             if let emergencyID = snapshot.value as? String {
                 let emergencyJSON = JSON(emergencyID)
                 print("getUserEmergencies: \(emergencyJSON)")
                 callback(emergencyID)
+            }
+        })
+        FIRDatabase.database().reference().child("/userEmergencies/\(userID)").observeEventType(.Value, withBlock:  { (snapshot) in
+            if let emergencyID = snapshot.value as? Dictionary<String,AnyObject> {
+//                let emergencyJSON = JSON(emergencyID)
+                print("getUserEmergencies: \(emergencyID)")//print("getUserEmergencies: \(emergencyJSON)")
+//                callback(emergencyID)
             }
         })
         
