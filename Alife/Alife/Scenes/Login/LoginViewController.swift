@@ -14,6 +14,10 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var isLoginCase:Bool = true
     
+    override func viewWillAppear(animated: Bool) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -28,6 +28,7 @@
 		9CE468DB1E6A5BFB00DFD475 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468DA1E6A5BFB00DFD475 /* ViewController+Extension.swift */; };
 		9CE468DD1E6A5F0500DFD475 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468DC1E6A5F0500DFD475 /* LabelCell.swift */; };
 		9CE468DF1E6A610D00DFD475 /* Buttons+LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468DE1E6A610D00DFD475 /* Buttons+LoginVC.swift */; };
+		9CE468E11E6A64CA00DFD475 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CE468E01E6A64CA00DFD475 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		9CE468DA1E6A5BFB00DFD475 /* ViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		9CE468DC1E6A5F0500DFD475 /* LabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
 		9CE468DE1E6A610D00DFD475 /* Buttons+LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Buttons+LoginVC.swift"; sourceTree = "<group>"; };
+		9CE468E01E6A64CA00DFD475 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BDCD74B557A7FAE0F0E93F80 /* Pods-Alife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Alife/Pods-Alife.debug.xcconfig"; sourceTree = "<group>"; };
 		C7AC0FD1E34C965D628BFA79 /* Pods_Alife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				9C24AD321E6A2DA600AB0503 /* Assets.xcassets */,
 				9C24AD341E6A2DA600AB0503 /* LaunchScreen.storyboard */,
 				9C24AD371E6A2DA600AB0503 /* Info.plist */,
+				9CE468E01E6A64CA00DFD475 /* GoogleService-Info.plist */,
 				9C24AD2F1E6A2DA600AB0503 /* Alife.xcdatamodeld */,
 			);
 			path = Alife;
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C24AD361E6A2DA600AB0503 /* LaunchScreen.storyboard in Resources */,
+				9CE468E11E6A64CA00DFD475 /* GoogleService-Info.plist in Resources */,
 				9C24AD331E6A2DA600AB0503 /* Assets.xcassets in Resources */,
 				9C24AD2E1E6A2DA600AB0503 /* Main.storyboard in Resources */,
 			);

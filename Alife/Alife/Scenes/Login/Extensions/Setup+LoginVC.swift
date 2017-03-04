@@ -17,7 +17,7 @@ extension LoginViewController {
     }
     
     func hideKeyboardOnTouch() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")  
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector(dismissKeyboard()))
         view.addGestureRecognizer(tap)
     }
     
