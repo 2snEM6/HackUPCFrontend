@@ -169,6 +169,11 @@
 		9C24AD3F1E6A2F1200AB0503 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
+				03DD171D1E6AD46B00CBD252 /* Emergency */,
+				9C24AD401E6A2F1200AB0503 /* Chat */,
+=======
+>>>>>>> Stashed changes
 				9C24AD411E6A2F1200AB0503 /* Login */,
 				9CE468E71E6AD1BF00DFD475 /* TabBar */,
 				9C24AD401E6A2F1200AB0503 /* Chat */,
@@ -384,8 +389,11 @@
 			files = (
 				9C24AD541E6A309C00AB0503 /* TableView+LoginVC.swift in Sources */,
 				9CE468E61E6AC00D00DFD475 /* Constants.swift in Sources */,
-				9CE468E91E6AD1CE00DFD475 /* TabBar.swift in Sources */,
+<<<<<<< Updated upstream
 				03DD17221E6AE0F300CBD252 /* ChatAPI.swift in Sources */,
+=======
+				9CE468E91E6AD1CE00DFD475 /* TabBar.swift in Sources */,
+>>>>>>> Stashed changes
 				9CE468D91E6A543200DFD475 /* ButtonCell.swift in Sources */,
 				9CE468DB1E6A5BFB00DFD475 /* ViewController+Extension.swift in Sources */,
 				9C24AD4E1E6A2FB400AB0503 /* Emergency.swift in Sources */,

@@ -47,7 +47,7 @@ extension LoginViewController {
                     
                     cell.customButton.layer.cornerRadius = 30
                     cell.customButton.setTitle("LOGIN", forState: .Normal)
-                    cell.customButton.addTarget(self, action: Selector(loginButtonPressed()), forControlEvents: .TouchUpInside)
+                    cell.customButton.addTarget(self, action: #selector(loginButtonPressed), forControlEvents: .TouchUpInside)
                     
                     return cell
                 }
@@ -55,7 +55,7 @@ extension LoginViewController {
         case 5:
             
             if let cell = tableView.dequeueReusableCellWithIdentifier("buttonCell") as? ButtonCell {
-                cell.customButton.addTarget(self, action: Selector(registerButtonPressed()), forControlEvents: .TouchUpInside)
+                cell.customButton.addTarget(self, action: #selector(registerButtonPressed), forControlEvents: .TouchUpInside)
                 cell.customButton.layer.cornerRadius = 30
                 cell.customButton.setTitle("REGISTER", forState: .Normal)
                 

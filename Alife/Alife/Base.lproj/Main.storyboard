@@ -180,17 +180,17 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="loginTableView" destination="9Eu-Aq-w0Z" id="8u3-6Z-tSy"/>
-                        <segue destination="CUz-Wg-tiZ" kind="show" identifier="emergencySegue" id="4Bf-YK-QZZ"/>
+                        <segue destination="eX1-tO-IJH" kind="show" identifier="emergencySegue" id="4Bf-YK-QZZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="945.5" y="443.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="1Z7-VY-gfP">
             <objects>
-                <viewController id="CUz-Wg-tiZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CUz-Wg-tiZ" customClass="ChatViewController" customModule="Alife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="htI-Fz-CFA"/>
                         <viewControllerLayoutGuide type="bottom" id="P5t-xm-Var"/>
@@ -200,11 +200,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="chatsIcon" selectedImage="chatsIcon" id="ajI-tC-JfT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFz-O3-ofy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1509.5" y="443.5"/>
+            <point key="canvasLocation" x="2277.5" y="-400.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LCI-7J-kYb">
+            <objects>
+                <viewController id="9zo-eF-ZEf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kR2-UD-ydf"/>
+                        <viewControllerLayoutGuide type="bottom" id="bXC-Sh-h3d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9He-rZ-3Kc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="profileIcon" selectedImage="profileIcon" id="neV-EE-04H"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8VY-0N-OsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2239.5" y="1251.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f1h-Ow-Kwi">
@@ -215,7 +236,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WZB-cW-FRq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.80784313725490198" green="0.23921568627450979" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -226,5 +251,53 @@
             </objects>
             <point key="canvasLocation" x="-40.5" y="426.5"/>
         </scene>
+        <!--Tab Bar-->
+        <scene sceneID="lHH-c5-GTk">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eX1-tO-IJH" customClass="TabBar" customModule="Alife" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ZxG-Ti-CKm">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.3458967195" green="0.48334267240000001" blue="0.66037383949999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.83137254901960778" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="CUz-Wg-tiZ" kind="relationship" relationship="viewControllers" id="I7l-hV-m69"/>
+                        <segue destination="st8-BE-rmp" kind="relationship" relationship="viewControllers" id="HsM-xr-Fzw"/>
+                        <segue destination="9zo-eF-ZEf" kind="relationship" relationship="viewControllers" id="44z-nY-Bm2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLz-hq-6pO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1622" y="443"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fcd-e1-bvU">
+            <objects>
+                <viewController id="st8-BE-rmp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hBo-hr-TXf"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZoA-fC-23E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6rS-Ba-VIw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="alertIcon" selectedImage="alertIcon" id="zDZ-hO-YrS"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Qg-sq-Xiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2259.5" y="411.5"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="alertIcon" width="24" height="24"/>
+        <image name="chatsIcon" width="24" height="24"/>
+        <image name="profileIcon" width="24" height="24"/>
+    </resources>
 </document>

@@ -12,16 +12,25 @@ import FirebaseAuth
 class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var loginTableView: UITableView!
-        
+    
+    var authAPIStore: AuthAPIStore = AuthAPIStore()
+    
     var fakeUsername:String = "Alex"
-    var fakeEmail:String = "fake@gmail.com"
+    var fakeEmail:String = "fake\(Int64(NSDate().timeIntervalSince1970))@gmail.com"
     var fakePassword:String = "test123"
+    
+    var user:User? 
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+//        self.signOut()
+        
         if let user = FIRAuth.auth()?.currentUser {
+            self.navigationController?.navigationItem.leftBarButtonItems = []
+            
             self.performSegueWithIdentifier("emergencySegue", sender: self)
+            
             print("Logged in")
         }
         else {
@@ -31,7 +40,6 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         self.setupUI()
     }
@@ -46,6 +54,14 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
 
+    func signOut() {
+        do{
+            try FIRAuth.auth()?.signOut()
+        }
+        catch{
+            print("Error while signing out!")
+        }
+    }
     
     
 }

@@ -10,9 +10,16 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.hidesBackButton = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabBarController?.navigationItem.leftBarButtonItems = []
+        self.tabBarController?.navigationController?.navigationItem.backBarButtonItem = nil
+        self.tabBarController?.navigationItem.hidesBackButton = true
     }
     
     override func didReceiveMemoryWarning() {

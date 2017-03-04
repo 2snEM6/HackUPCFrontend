@@ -14,6 +14,12 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.navigationController?.navigationBar.topItem?.title = "Emergencies"
+        
+        self.tabBarController?.navigationItem.leftBarButtonItems = []
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,5 +30,6 @@ class ChatViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
     }
+    
     
 }
