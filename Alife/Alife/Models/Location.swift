@@ -7,13 +7,30 @@
 //
 
 import UIKit
+import SwiftyJSON
 
-class Location {
+public protocol LocationSerializable {
+    static func object(fromJSON json: JSON) -> AnyObject?
+}
+
+class Location: LocationSerializable {
     var lat: Double
     var long: Double
     
     init(lat: Double, long: Double) {
         self.lat = lat
         self.long = long
+    }
+    
+    static func object(fromJSON json: JSON) -> AnyObject? {
+        guard let lat = json["lat"].double
+            , let long = json["long"].double
+            else {
+                print("ERROR: Parsing location")
+                
+                return nil
+        }
+        
+        return Location(lat: lat, long: long)
     }
 }
