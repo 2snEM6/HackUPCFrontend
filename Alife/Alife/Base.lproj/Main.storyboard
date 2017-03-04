@@ -180,11 +180,31 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="loginTableView" destination="9Eu-Aq-w0Z" id="8u3-6Z-tSy"/>
+                        <segue destination="CUz-Wg-tiZ" kind="show" identifier="emergencySegue" id="4Bf-YK-QZZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="945.5" y="443.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1Z7-VY-gfP">
+            <objects>
+                <viewController id="CUz-Wg-tiZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="htI-Fz-CFA"/>
+                        <viewControllerLayoutGuide type="bottom" id="P5t-xm-Var"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hIt-w9-ybV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFz-O3-ofy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509.5" y="443.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f1h-Ow-Kwi">
@@ -204,7 +224,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PsV-Ey-pum" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="224" y="444"/>
+            <point key="canvasLocation" x="-40.5" y="426.5"/>
         </scene>
     </scenes>
 </document>

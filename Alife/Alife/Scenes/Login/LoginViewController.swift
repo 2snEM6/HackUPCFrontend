@@ -7,15 +7,26 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var loginTableView: UITableView!
-    
-    var isLoginCase:Bool = true
+        
+    var fakeUsername:String = "Alex"
+    var fakeEmail:String = "fake@gmail.com"
+    var fakePassword:String = "test123"
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
+        if let user = FIRAuth.auth()?.currentUser {
+            self.performSegueWithIdentifier("emergencySegue", sender: self)
+            print("Logged in")
+        }
+        else {
+            print("Not logged in")
+        }
     }
     
     override func viewDidLoad() {

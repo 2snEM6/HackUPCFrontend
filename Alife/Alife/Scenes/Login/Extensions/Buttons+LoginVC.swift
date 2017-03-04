@@ -18,9 +18,7 @@ extension LoginViewController {
     }
     
     func registerButtonPressed() {
-        if isLoginCase {
-            
-        }
+        
         
     }
 }
