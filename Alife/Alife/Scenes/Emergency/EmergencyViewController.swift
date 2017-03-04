@@ -15,18 +15,25 @@ class EmergencyViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //  testing
+        getUserLocation()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+        
     }
     
     func getUserLocation() {
         SwiftLocation.Location.getLocation(withAccuracy: .Block, frequency: .OneShot, timeout: 50, onSuccess: { (location) in
-            return (location.coordinate.latitude, location.coordinate.longitude) //double
+            //double
+            print("EmergencyLocation:   lat = \(location.coordinate.latitude)   long = \(location.coordinate.longitude)")
         }) { (lastValidLocation, error) in
-            return (lastValidLocation!.coordinate.latitude, lastValidLocation!.coordinate.longitude)
+            //double
+            print("FAIL: EmergencyLocation")
         }
     }
     

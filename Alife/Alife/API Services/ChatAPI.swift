@@ -8,10 +8,11 @@
 
 import Alamofire
 import Firebase
+import SwiftyJSON
 
 class ChatAPI {
     
-    typealias SendMessageCompletionHandler = (user: User?) -> Void
+    typealias SendMessageCompletionHandler = () -> Void
     
     //  /users/:id/emergencies/:emergencyID/messages
     func sendMessage(userID: String, emergencyID: String, message: String, completion: SendMessageCompletionHandler) {
@@ -36,13 +37,23 @@ class ChatAPI {
             switch response.result {
             case .Success(let JSON):
                 print("Success with JSON: \(JSON)")
-//                completion(user: User(id: userID, fullname: name, email: email))
                 
             case .Failure(let error):
                 print(error)
-                completion(user: nil)
+                completion()
             }
             
         }
     }
+    
+    func getMessage(emergencyID: String, callback: (Message) -> Void){
+        FIRDatabase.database().reference().child("/emergencyMessages/\(emergencyID)").observeEventType(.ChildAdded, withBlock:  { (snapshot) in
+            if let messageDictionary = snapshot.value as? Dictionary<String, AnyObject> {
+                let messageJSON = JSON(messageDictionary)
+                let message = Message.object(fromJSON: messageJSON) as! Message
+                callback(message)
+            }
+        })
+    }
+    
 }

@@ -78,25 +78,4 @@ class AuthAPIStore {
         
     }
     
-    //  End point: /users/:id/emergencies
-    func postEmergency(userID: String, type: Int, lat: Double, long: Double) {
-        let URL = NSURL(string: "\(Constants.Server.URI_API)/users/\(userID)/emergencies")!
-        let URLRequest = NSMutableURLRequest(URL: URL)
-        
-        URLRequest.HTTPMethod = "POST"
-        
-        URLRequest.setValue("key=\(Constants.Firebase.API_KEY)", forHTTPHeaderField: "Authorization")
-        URLRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let encoding = Alamofire.ParameterEncoding.JSON
-        
-        let parameters: [String: AnyObject] = [
-            "lat": lat,
-            "long": long
-        ]
-        
-        let encoded = encoding.encode(URLRequest, parameters: parameters).0
-        Alamofire.request(encoded)
-    }
-    
 }
