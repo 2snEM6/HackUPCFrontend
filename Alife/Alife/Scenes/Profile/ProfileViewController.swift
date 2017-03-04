@@ -8,16 +8,19 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var profileTableView: UITableView!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.navigationItem.hidesBackButton = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.profileTableView.tableFooterView = UIView()
+
         
     }
     

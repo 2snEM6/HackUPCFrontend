@@ -6,9 +6,4 @@
 //  Copyright © 2017 HackUPC. All rights reserved.
 //
 
-import UIKit
-
-extension EmergencyViewController {
-    
-    
-}
+import Foundation

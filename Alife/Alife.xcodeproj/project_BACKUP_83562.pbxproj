@@ -496,8 +496,11 @@
 				9CBDA7601E6B67FC0080967E /* TableView+ProfileVC.swift in Sources */,
 				9CBDA75E1E6B661D0080967E /* ImageLabelCell.swift in Sources */,
 				9CBDA7581E6B5A9C0080967E /* EmergencyAPIStore.swift in Sources */,
+<<<<<<< Updated upstream
 				038F9BDC1E6B78EC0033D889 /* Buttons+EmergencyVC.swift in Sources */,
+=======
 				9CBDA75C1E6B65370080967E /* TwoLabelsCell.swift in Sources */,
+>>>>>>> Stashed changes
 				9CBDA7571E6B5A9C0080967E /* ChatAPI.swift in Sources */,
 				9CBDA7561E6B5A9C0080967E /* AuthAPIStore.swift in Sources */,
 				03DD17241E6AE74D00CBD252 /* Location.swift in Sources */,
