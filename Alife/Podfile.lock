@@ -37,6 +37,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.8)
   - IQKeyboardManagerSwift (4.0.5)
   - Kingfisher (1.9.3)
+  - SwiftLocation (1.0.5)
   - SwiftValidator (3.0.1)
   - SwiftyJSON (2.4.0)
   - Swinject (1.1.5)
@@ -48,16 +49,23 @@ DEPENDENCIES:
   - Firebase/Database
   - IQKeyboardManagerSwift (= 4.0.5)
   - Kingfisher (~> 1.2)
+  - SwiftLocation (from `https://github.com/malcommac/SwiftLocation.git`, branch `feature/swift2.3`)
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, tag `4.0.0`)
   - SwiftyJSON (< 3.0.0)
   - Swinject (~> 1.1.4)
 
 EXTERNAL SOURCES:
+  SwiftLocation:
+    :branch: feature/swift2.3
+    :git: https://github.com/malcommac/SwiftLocation.git
   SwiftValidator:
     :git: https://github.com/jpotts18/SwiftValidator.git
     :tag: 4.0.0
 
 CHECKOUT OPTIONS:
+  SwiftLocation:
+    :commit: 8a880f3bb8f8b64e1910f148c362ff588e8e0ce0
+    :git: https://github.com/malcommac/SwiftLocation.git
   SwiftValidator:
     :git: https://github.com/jpotts18/SwiftValidator.git
     :tag: 4.0.0
@@ -74,10 +82,11 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   IQKeyboardManagerSwift: 41fd3a45a2cdb2a0e031af697708a95b865068a1
   Kingfisher: 9e37d2a78a082dc123bfe8a16de65de85518daae
+  SwiftLocation: 310142ddfcfc1df770b05ee762592f6ee9896cee
   SwiftValidator: 461a2c00173f001287a8fa1f12704b87ec8a6bc4
   SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
   Swinject: 49b2b23850829e0a6074681264dcb1aa64c0dbca
 
-PODFILE CHECKSUM: 53e0eed92c8f68251dc0b98d592292a8e82a14a5
+PODFILE CHECKSUM: d7dab9c610c7eccaa2fc9a0eac3589bbc0482ac7
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.0

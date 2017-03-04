@@ -9,5 +9,14 @@
 import UIKit
 
 class Emergency {
-
+    var id:String
+    var type:String
+    var location: Location
+    
+    init(id: String, type: String, location: Location) {
+        
+        self.id = id
+        self.type = type
+        self.location = location
+    }
 }

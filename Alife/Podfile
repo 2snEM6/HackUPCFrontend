@@ -22,4 +22,6 @@ target 'Alife' do
 	pod 'IQKeyboardManagerSwift', '4.0.5'
 
 	pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.0.0'
+    
+    pod 'SwiftLocation', :git => 'https://github.com/malcommac/SwiftLocation.git', :branch => 'feature/swift2.3'
 end
