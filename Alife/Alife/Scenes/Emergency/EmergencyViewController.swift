@@ -10,13 +10,29 @@ import UIKit
 import SwiftLocation
 
 class EmergencyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    let emergencyAPIStore = EmergencyAPIStore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //  testing
-        getUserLocation()
+        print("TEST: POSTING emergency")
+        emergencyAPIStore.postEmergency("t2hLBi4OcIbededu7Q9vPQyxko33", type: 0, lat:
+            41.387015, long: 2.170047)
+        
+        print("TEST: GET ALL emergencies")
+        emergencyAPIStore.getUserEmergenciesID("t2hLBi4OcIbededu7Q9vPQyxko33") { (emergenciesID) in
+            for emergencyID in emergenciesID {
+                print("EmergencyID: \(emergencyID)")
+            }
+            self.emergencyAPIStore.getEmergencies(emergenciesID, callback: { (emergency) in
+                print("Emergency: \(emergency.id)")
+                print(emergency)
+            })
+            
+        }
+        
+        
         
     }
 

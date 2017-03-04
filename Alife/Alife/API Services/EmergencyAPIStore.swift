@@ -26,7 +26,8 @@ class EmergencyAPIStore {
         
         let parameters: [String: AnyObject] = [
             "lat": lat,
-            "long": long
+            "long": long,
+            "type": type
         ]
         
         let encoded = encoding.encode(URLRequest, parameters: parameters).0
@@ -49,17 +50,19 @@ class EmergencyAPIStore {
     
     func getEmergencies(emergenciesID: [String], callback: Emergency -> Void)  {
         //var emergencies: [Emergency] = []
+        print("TEST: emergenciesID")
+        print(emergenciesID)
         
         for emergencyID in emergenciesID {
-            FIRDatabase.database().reference().child("/emergencies/\(emergencyID)").observeEventType(.ChildAdded, withBlock: { (snapshot) in
+            FIRDatabase.database().reference().child("/emergencies/\(emergencyID)").observeEventType(.Value, withBlock: { (snapshot) in
                 if let emergencyDictionary = snapshot.value as? Dictionary<String, AnyObject> {
                     
                     let emergencyJSON = JSON(emergencyDictionary)
-                    let emergency = Emergency.object(fromJSON: emergencyJSON) as! Emergency
+                    print("Success    bhgt with JSON: \(emergencyJSON)")
+                    if let emergency = Emergency.object(fromJSON: emergencyJSON) as? Emergency {
+                        callback(emergency)
+                    }
                     //emergencies.append(emergency)
-                    
-                    print("Success with JSON: \(emergencyJSON)")
-                    callback(emergency)
                 }
             })
         }

@@ -29,15 +29,16 @@ class Emergency: EmergencySerializable {
     
     static func object(fromJSON json: JSON) -> AnyObject? {
         
-        let location = Location.object(fromJSON: json["data"]["location"]) as! Location
-        
-        guard let id = json["key"].string
-            , let type = json["data"]["type"].int
-            else {
-                print("ERROR: Parsing emergency")
-                return nil
+        if let location = Location.object(fromJSON: json["data"]["location"]) as? Location {
+            guard let id = json["key"].string
+                , let type = json["data"]["type"].int
+                else {
+                    print("ERROR: Parsing emergency")
+                    return nil
+            }
+            
+            return Emergency(id: id, type: type, location: location)
         }
-        
-        return Emergency(id: id, type: type, location: location)
+        return nil
     }
 }
