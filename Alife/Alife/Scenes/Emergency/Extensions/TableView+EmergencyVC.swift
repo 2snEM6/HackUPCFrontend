@@ -28,12 +28,15 @@ extension EmergencyViewController {
             
             if indexPath.row == 1 {
                 cell.customButton.backgroundColor = UIColor(red:0.81, green:0.24, blue:0.24, alpha:1.0)
+                cell.customButton.addTarget(self, action: #selector(deadRisk()), forControlEvents: .TouchUpInside)
             }
             else if indexPath.row == 2 {
                 cell.customButton.backgroundColor = UIColor(red:0.89, green:0.45, blue:0.08, alpha:1.0)
+                cell.customButton.addTarget(self, action: #selector(severe()), forControlEvents: .TouchUpInside)
             }
             else if indexPath.row == 3 {
                 cell.customButton.backgroundColor = UIColor(red:1.00, green:0.90, blue:0.00, alpha:1.0)
+                cell.customButton.addTarget(self, action: #selector(hazard()), forControlEvents: .TouchUpInside)
             }
             
             return cell
