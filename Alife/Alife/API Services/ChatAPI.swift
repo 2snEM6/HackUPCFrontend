@@ -11,8 +11,10 @@ import Firebase
 
 class ChatAPI {
     
+    typealias SendMessageCompletionHandler = (user: User?) -> Void
+    
     //  /users/:id/emergencies/:emergencyID/messages
-    func sendMessage(userID: String, emergencyID: String, message: String, completion: (User) -> Void) {
+    func sendMessage(userID: String, emergencyID: String, message: String, completion: SendMessageCompletionHandler) {
         let URL = NSURL(string: "\(Constants.Server.URI_API)/users/\(userID)/emergencies/\(emergencyID)/messages")!
         let URLRequest = NSMutableURLRequest(URL: URL)
         
@@ -34,7 +36,7 @@ class ChatAPI {
             switch response.result {
             case .Success(let JSON):
                 print("Success with JSON: \(JSON)")
-                completion(user: User(id: userID, fullname: name, email: email))
+//                completion(user: User(id: userID, fullname: name, email: email))
                 
             case .Failure(let error):
                 print(error)

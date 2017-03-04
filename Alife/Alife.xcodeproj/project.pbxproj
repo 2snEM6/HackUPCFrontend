@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		036578879A972EEA6CBBA353 /* Pods_Alife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AC0FD1E34C965D628BFA79 /* Pods_Alife.framework */; };
-		03DD17201E6AD4E000CBD252 /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD171F1E6AD4E000CBD252 /* EmergencyViewController.swift */; };
 		03DD17221E6AE0F300CBD252 /* ChatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD17211E6AE0F300CBD252 /* ChatAPI.swift */; };
 		03DD17241E6AE74D00CBD252 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD17231E6AE74D00CBD252 /* Location.swift */; };
 		9C24AD291E6A2DA600AB0503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24AD281E6A2DA600AB0503 /* AppDelegate.swift */; };
@@ -40,7 +39,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03DD171F1E6AD4E000CBD252 /* EmergencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		03DD17211E6AE0F300CBD252 /* ChatAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatAPI.swift; sourceTree = "<group>"; };
 		03DD17231E6AE74D00CBD252 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		42A00F9DC740FF447A229DC3 /* Pods-Alife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alife.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alife/Pods-Alife.release.xcconfig"; sourceTree = "<group>"; };
@@ -412,7 +410,6 @@
 				9C24AD4C1E6A2FAD00AB0503 /* User.swift in Sources */,
 				9C4D36F71E6AF39A00C0828F /* Setup+EmergencyVC.swift in Sources */,
 				9CE468E41E6ABFB000DFD475 /* AuthAPIStore.swift in Sources */,
-				03DD17201E6AD4E000CBD252 /* EmergencyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
