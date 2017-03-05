@@ -45,5 +45,8 @@ class ChatMessages: JSQMessagesViewController {
     func setup() {
         self.senderId = (FIRAuth.auth()?.currentUser?.uid)!
         self.senderDisplayName = UIDevice.currentDevice().identifierForVendor?.UUIDString
+        
+        collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
+        collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
     }
 }
