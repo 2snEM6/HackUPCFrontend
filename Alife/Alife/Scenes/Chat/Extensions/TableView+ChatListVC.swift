@@ -18,25 +18,21 @@ extension ChatListViewController {
         
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("chatListCell") as? ChatListCell {
-            
-           
-            let emergencyID = self.emergenciesID[indexPath.row]
-            let emergency = self.emergencies[emergencyID]
+
+            let emergency = self.emergencies[indexPath.row]
             
             cell.emergencyLocationTextView.text = "Emergency in Barcelona"
+            cell.emergencyGravityTextView.text = self.minutesDifference(emergency.timestamp)
+            
             cell.gravityColor.layer.cornerRadius = cell.gravityColor.frame.height / 2
-            switch emergency!.type {
-            case 0:
-                cell.emergencyGravityTextView.text = "22 minutes ago"
+            switch emergency.type {
+            case 2:
                 cell.gravityColor.backgroundColor = UIColor(red:0.81, green:0.24, blue:0.24, alpha:1.0)
             case 1:
-                cell.emergencyGravityTextView.text = "Less than a minute"
                 cell.gravityColor.backgroundColor = UIColor(red:0.89, green:0.45, blue:0.08, alpha:1.0)
-            case 2:
-                cell.emergencyGravityTextView.text = "15 minutes ago"
+            case 0:
                 cell.gravityColor.backgroundColor = UIColor(red:1.00, green:0.90, blue:0.00, alpha:1.0)
             default:
-                cell.emergencyGravityTextView.text = "Right now"
                 cell.gravityColor.backgroundColor = UIColor(red:1.00, green:0.90, blue:0.00, alpha:1.0)
             }
             
@@ -44,6 +40,22 @@ extension ChatListViewController {
         }
         
         return UITableViewCell()
+    }
+    
+    func minutesDifference(timestamp: Int64) -> String {
+        let newDate = NSDate()
+        
+        let calendar = NSCalendar.currentCalendar()
+        
+        let emergencyDate = NSDate(timeIntervalSince1970: Double(Int(timestamp/1000)))
+        let datecomponents = calendar.components(NSCalendarUnit.Minute, fromDate: emergencyDate, toDate: newDate, options: [])
+        print(datecomponents)
+        if datecomponents.minute < 1 {
+            return "Less than a minute"
+        }
+        else {
+            return "\(datecomponents.minute) minutes ago"
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

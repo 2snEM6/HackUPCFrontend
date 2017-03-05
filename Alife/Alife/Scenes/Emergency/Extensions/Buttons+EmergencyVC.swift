@@ -17,7 +17,7 @@ extension EmergencyViewController {
     }
     
     func deadRisk() {
-        let type = 0
+        let type = 2
         sendEmergency(type)
     }
     
@@ -27,7 +27,7 @@ extension EmergencyViewController {
     }
     
     func hazard() {
-        let type = 1
+        let type = 0
         sendEmergency(type)
         
     }

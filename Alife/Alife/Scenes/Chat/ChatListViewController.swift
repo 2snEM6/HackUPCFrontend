@@ -18,7 +18,7 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     var userID:String = ""
     
     var emergenciesID: [String] = []
-    var emergencies: [String : Emergency] = [:]
+    var emergencies: [Emergency] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,22 +26,18 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         userID = (FIRAuth.auth()?.currentUser?.uid)!
         
         
-        print("TEST: GET ALL emergencies")
-        
         emergencyAPIStore.getUserEmergenciesID(userID) { (emergencyID) in
             self.emergenciesID.append(emergencyID)
             self.emergencyAPIStore.getEmergency(emergencyID, callback: { (emergency) in
-                self.emergencies[emergency.id] = emergency
-                self.chatTableView.reloadData()
+                self.emergencies.insert(emergency, atIndex: 0)
+                let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+                self.chatTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             })
             
-        }
-        
+        }    
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
     }
-    
-    
 }
