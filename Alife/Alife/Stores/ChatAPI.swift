@@ -32,6 +32,7 @@ class ChatAPI {
         ]
         
         let encoded = encoding.encode(URLRequest, parameters: parameters).0
+        print(encoded)
         
         Alamofire.request(encoded).responseJSON { (response) in
             

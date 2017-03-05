@@ -13,7 +13,7 @@ extension LoginViewController {
     
     func loginButtonPressed() {
         
-        self.authAPIStore.login(self.fakeEmail, password: self.fakePassword) { (user, error) in
+        self.authAPIStore.login(self.email, password: self.password) { (user, error) in
             
             if let error = error {
                 print(error)
@@ -29,12 +29,6 @@ extension LoginViewController {
     }
     
     func registerButtonPressed() {
-        
-        self.authAPIStore.register(self.fakeUsername, email: self.fakeEmail, password: self.fakePassword) { (user) in
-            
-            self.performSegueWithIdentifier("emergencySegue", sender: self)
-            
-            print("Logged in")
-        }
+        self.performSegueWithIdentifier("registerScene", sender: self)
     }
 }

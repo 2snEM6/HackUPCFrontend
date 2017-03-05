@@ -9,15 +9,16 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet var loginTableView: UITableView!
     
     var authAPIStore: AuthAPIStore = AuthAPIStore()
+
+    let fields:[UITableViewCell] = []
+    var email:String = ""
+    var password:String = ""
     
-    var fakeUsername:String = "Alex"
-    var fakeEmail:String = "fake\(Int64(NSDate().timeIntervalSince1970))@gmail.com"
-    var fakePassword:String = "test123"
     
     var user:User? 
     
@@ -30,7 +31,7 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated: true)
-//        self.signOut()
+        self.signOut()
         
         if let user = FIRAuth.auth()?.currentUser {
 //            self.navigationController?.navigationItem.leftBarButtonItems = []
@@ -59,7 +60,6 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if (segue.identifier == "emergencySegue") {
             let destinationVC: UITabBarController = segue.destinationViewController as! TabBar
             destinationVC.navigationItem.hidesBackButton = true
-            
         }
         
     }

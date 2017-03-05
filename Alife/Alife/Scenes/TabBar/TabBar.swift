@@ -34,13 +34,13 @@ class TabBar: UITabBarController {
         
         let unselectedColor:UIColor = UIColor.whiteColor()
         
-        for item in self.tabBar.items! {
-        
-            item.image = item.selectedImage?.imageWithColor(unselectedColor).imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
-            //In case you wish to change the font color as well
-            let attributes = [NSForegroundColorAttributeName: unselectedColor]
-            item.setTitleTextAttributes(attributes, forState: UIControlState.Normal)
-        }
+//        for item in self.tabBar.items! {
+//        
+//            item.image = item.selectedImage?.imageWithColor(unselectedColor).imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+//            //In case you wish to change the font color as well
+//            let attributes = [NSForegroundColorAttributeName: unselectedColor]
+//            item.setTitleTextAttributes(attributes, forState: UIControlState.Normal)
+//        }
     }
     
     override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {

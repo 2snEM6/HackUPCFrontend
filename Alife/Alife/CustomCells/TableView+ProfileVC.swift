@@ -52,7 +52,7 @@ extension ProfileViewController {
         case 4:
 
             if let cell = tableView.dequeueReusableCellWithIdentifier("twoLabelCells") as? TwoLabelCells {
-                cell.customTitleLabel.text = "Birthdate"
+                cell.customTitleLabel.text = "Birthday"
                 cell.customValueLabel.text = "29 sept 1945"
                 return cell
             }

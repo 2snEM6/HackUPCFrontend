@@ -30,6 +30,9 @@ extension LoginViewController {
                 cell.customView.layer.borderColor = UIColor(red:0.93, green:0.59, blue:0.58, alpha:1.0).CGColor
                 
                 cell.customTextField.placeholder = "Email"
+                cell.customTextField.tag = 0
+                cell.customTextField.delegate = self
+                
                 return cell
             }
             
@@ -39,6 +42,10 @@ extension LoginViewController {
                 cell.customView.layer.borderWidth = 2
                 cell.customView.layer.borderColor = UIColor(red:0.93, green:0.59, blue:0.58, alpha:1.0).CGColor
                 cell.customTextField.placeholder = "Password"
+                cell.customTextField.secureTextEntry = true
+                cell.customTextField.tag = 1
+                cell.customTextField.delegate = self
+                
                 return cell
             }
         case 4:
@@ -70,6 +77,7 @@ extension LoginViewController {
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        self.view.endEditing(true)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -82,5 +90,17 @@ extension LoginViewController {
             return 80
         }
     }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if textField.tag == 0 {
+            self.email = textField.text!
+        }
+        else if textField.tag == 1 {
+            self.password = textField.text!
+        }
+        print(textField.text)
+        return true
+    }
+    
     
 }

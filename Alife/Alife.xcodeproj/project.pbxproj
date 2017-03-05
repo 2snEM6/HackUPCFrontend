@@ -41,6 +41,7 @@
 		9CBDA7631E6BA6F50080967E /* ChatMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDA7621E6BA6F50080967E /* ChatMessagesViewController.swift */; };
 		9CBDA7661E6BBA410080967E /* CollectionView+ChatMessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDA7651E6BBA410080967E /* CollectionView+ChatMessagesVC.swift */; };
 		9CBDA7681E6BBA750080967E /* Buttons+ChatMessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDA7671E6BBA750080967E /* Buttons+ChatMessagesVC.swift */; };
+		9CBDA76B1E6BD44C0080967E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDA76A1E6BD44C0080967E /* RegisterViewController.swift */; };
 		9CE468D51E6A427F00DFD475 /* IconTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468D41E6A427F00DFD475 /* IconTextFieldCell.swift */; };
 		9CE468D71E6A4B2E00DFD475 /* AppTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468D61E6A4B2E00DFD475 /* AppTitleCell.swift */; };
 		9CE468D91E6A543200DFD475 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE468D81E6A543200DFD475 /* ButtonCell.swift */; };
@@ -90,6 +91,7 @@
 		9CBDA7621E6BA6F50080967E /* ChatMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessagesViewController.swift; sourceTree = "<group>"; };
 		9CBDA7651E6BBA410080967E /* CollectionView+ChatMessagesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionView+ChatMessagesVC.swift"; sourceTree = "<group>"; };
 		9CBDA7671E6BBA750080967E /* Buttons+ChatMessagesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Buttons+ChatMessagesVC.swift"; sourceTree = "<group>"; };
+		9CBDA76A1E6BD44C0080967E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9CE468D41E6A427F00DFD475 /* IconTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconTextFieldCell.swift; sourceTree = "<group>"; };
 		9CE468D61E6A4B2E00DFD475 /* AppTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTitleCell.swift; sourceTree = "<group>"; };
 		9CE468D81E6A543200DFD475 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				9CBDA74C1E6B3DE10080967E /* Root */,
 				9C24AD411E6A2F1200AB0503 /* Login */,
+				9CBDA7691E6BD43E0080967E /* Register */,
 				9CE468E71E6AD1BF00DFD475 /* TabBar */,
 				9C24AD401E6A2F1200AB0503 /* ChatList */,
 				9C4D36F21E6AF2C500C0828F /* Emergency */,
@@ -338,6 +341,14 @@
 				9CBDA7671E6BBA750080967E /* Buttons+ChatMessagesVC.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9CBDA7691E6BD43E0080967E /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				9CBDA76A1E6BD44C0080967E /* RegisterViewController.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		9CE468D31E6A421600DFD475 /* CustomCells */ = {
@@ -523,6 +534,7 @@
 				9CBDA75E1E6B661D0080967E /* ImageLabelCell.swift in Sources */,
 				9CBDA7581E6B5A9C0080967E /* EmergencyAPIStore.swift in Sources */,
 				038F9BDC1E6B78EC0033D889 /* Buttons+EmergencyVC.swift in Sources */,
+				9CBDA76B1E6BD44C0080967E /* RegisterViewController.swift in Sources */,
 				9CBDA75C1E6B65370080967E /* TwoLabelsCell.swift in Sources */,
 				9CBDA7571E6B5A9C0080967E /* ChatAPI.swift in Sources */,
 				9CBDA7561E6B5A9C0080967E /* AuthAPIStore.swift in Sources */,

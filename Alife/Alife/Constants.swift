@@ -16,6 +16,6 @@ struct Constants {
     }
     
     struct Server {
-        static let URI_API = "https://alifeapi.herokuapp.com"
+        static let URI_API = "https://alifeapidev.herokuapp.com"
     }
 }
