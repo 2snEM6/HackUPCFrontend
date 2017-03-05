@@ -14,7 +14,7 @@ public protocol MessageSerializable {
 }
 
 class Message: MessageSerializable {
-    let id: String
+
     var type: String
     var content: String
     var sentDate: String
@@ -22,8 +22,8 @@ class Message: MessageSerializable {
     var senderName: String
     
     
-    init(id: String, type: String, content: String, sentDate: String, senderID: String, senderName: String) {
-        self.id = id
+    init(type: String, content: String, sentDate: String, senderID: String, senderName: String) {
+        
         self.type = type
         self.content = content
         self.sentDate = sentDate
@@ -32,18 +32,18 @@ class Message: MessageSerializable {
     }
     
     static func object(fromJSON json: JSON) -> AnyObject? {
-        guard let id = json["data"]["id"].string
-            , let type = json["data"]["type"].string
-            , let content = json["data"]["content"].string
-            , let sentDate = json["data"]["sentDate"].string
-            , let senderID = json["data"]["senderID"].string
-            , let senderName = json["data"]["senderName"].string
+        guard let type = json["type"].string
+            , let content = json["content"].string
+            , let sentDate = json["sentDate"].string
+            , let senderID = json["senderID"].string
+            , let senderName = json["senderName"].string
             else {
                 print("ERROR: Parsing Message")
                 return nil
         }
         
-        return Message(id: id, type: type, content: content, sentDate: sentDate, senderID: senderID, senderName: senderName)
+        
+        return Message(type: type, content: content, sentDate: sentDate, senderID: senderID, senderName: senderName)
         
     }
 }

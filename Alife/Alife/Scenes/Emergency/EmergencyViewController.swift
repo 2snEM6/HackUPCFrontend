@@ -51,6 +51,7 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
+        
     }
 
 }

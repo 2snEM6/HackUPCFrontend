@@ -27,7 +27,8 @@ class ChatAPI {
         let encoding = Alamofire.ParameterEncoding.JSON
         
         let parameters: [String: AnyObject] = [
-            "message": message
+            "type":"test",
+            "content": message
         ]
         
         let encoded = encoding.encode(URLRequest, parameters: parameters).0

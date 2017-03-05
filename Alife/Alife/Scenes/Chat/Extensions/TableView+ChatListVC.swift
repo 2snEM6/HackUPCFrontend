@@ -59,6 +59,11 @@ extension ChatListViewController {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.selectedEmergencyID = self.emergencies[indexPath.row].id
+        
+        self.performSegueWithIdentifier("chatMessagesSegue", sender: self)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
     }
 }

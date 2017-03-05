@@ -16,6 +16,7 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var chatTableView: UITableView!
     
     var userID:String = ""
+    var selectedEmergencyID:String!
     
     var emergenciesID: [String] = []
     var emergencies: [Emergency] = []
@@ -38,6 +39,10 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+        let chatMessagesVC = segue.destinationViewController as! ChatMessages
+        chatMessagesVC.emergencyID = selectedEmergencyID
         
     }
+    
 }
